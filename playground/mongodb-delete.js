@@ -37,11 +37,12 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     }).then((result) => {
         console.log(result);
     });
-    */
+    
 
     db.collection("Users").deleteMany({
         name : "Andrew Azlan"
     }).then((result) => {
         console.log(result);
     });
+    */
 });
