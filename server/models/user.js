@@ -75,6 +75,8 @@ UserSchema.statics.findByToken = function (token) {
     });
 }
 
+//TODO: fungsi ini dijalankan sebelum dokumen di save, seperti onBeforeWrite, dimana 
+//password yang belum dienkrip, akan dienkrip sebelum disimpan 
 UserSchema.pre('save', function (next) {  
     var user = this;
     if (user.isModified('password')) {
